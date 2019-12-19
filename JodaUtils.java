@@ -1,7 +1,17 @@
-package com.ucar.train.common.util;
+package ucar.train.security.util;
 
 import org.apache.commons.lang3.StringUtils;
-import org.joda.time.*;
+import org.joda.time.DateTime;
+import org.joda.time.Hours;
+import org.joda.time.LocalDate;
+import org.joda.time.LocalDateTime;
+import org.joda.time.LocalTime;
+import org.joda.time.Minutes;
+import org.joda.time.Months;
+import org.joda.time.Period;
+import org.joda.time.PeriodType;
+import org.joda.time.Seconds;
+import org.joda.time.Years;
 import org.joda.time.format.DateTimeFormat;
 
 import java.text.ParseException;
@@ -9,6 +19,13 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+
+/**
+ * 时间工具类
+ * @author zhoujinmu (jinmu.zhou@ucarinc.com)
+ * @date 2019/12/17 10:15
+ * @since 1.0
+ */
 public final class JodaUtils {
 
     public static final String DEFAULT_DATE_TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
@@ -470,7 +487,7 @@ public final class JodaUtils {
      * 日期格式化转Integer
      *
      * @param date
-     * @param patten
+     * @param pattern
      * @return
      */
     public static Integer dateToInt(String date, String pattern) {
